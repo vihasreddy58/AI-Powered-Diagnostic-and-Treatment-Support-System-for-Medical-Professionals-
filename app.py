@@ -342,7 +342,7 @@ def Importance_of_Games():
         return render_template('blog_Importance_of_Games.html',username=username)
     return render_template('index.html')
 
-genai.configure(api_key='AIzaSyDynN2eNlpri7vfQW2f2TmFJkzXtEpcNt4')
+genai.configure(api_key='#genai api key')
 
 model = genai.GenerativeModel('gemini-pro')
 chat_model = model.start_chat(history=[])   # chat based on history

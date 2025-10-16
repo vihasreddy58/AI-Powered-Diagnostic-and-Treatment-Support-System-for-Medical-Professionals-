@@ -552,16 +552,7 @@ def view_prescription_patient(appointment_id):
 
 # ============================================================ scans ============================================================ 
     
-@app.route('/braintumor', methods=['GET', 'POST'])
-def braintumor():
-    username = None
-    if 'user_id' in session:
-        user = User.query.get(session['user_id'])
-        username = user.username
-        return render_template('brain-tumor.html',username=username)
-    else:
-        return render_template('index.html')
-    
+
 
 @app.route('/disease_predict', methods=['GET', 'POST'])
 def disease_predict():
@@ -594,24 +585,6 @@ def disease_predict():
     else:
         return render_template('index.html')
 
-@app.route('/lung')
-def lung():
-    username = None
-    if 'user_id' in session:
-        user = User.query.get(session['user_id'])
-        username = user.username
-        return render_template('lung.html',username=username)
-    else:
-        return render_template('index.html')
-
-@app.route('/cataract')
-def cataract():
-    username = None
-    if 'user_id' in session:
-        user = User.query.get(session['user_id'])
-        username = user.username
-        return render_template('cataract.html',username=username)
-    return render_template('index.html')
 
 
 if __name__ == '__main__':
